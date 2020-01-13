@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
 import Image from "@crystallize/react-image"
+import { Link } from "gatsby"
 
 import { colors, responsive } from "ui"
 
@@ -73,7 +73,6 @@ export const Img = styled(Image)`
     overflow: hidden;
   }
 `
-
 export const Outer = styled(Link)`
   display: flex;
   flex-direction: column;

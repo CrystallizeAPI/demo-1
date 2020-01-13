@@ -25,8 +25,8 @@ export default function IndexPage({ data }) {
     <Layout title="Home" headerItems={headerItems}>
       <Outer>
         <Header>
-          <H1>Oh hi there!</H1>
-          <p>Cool of you to join us.</p>
+          <H1>PUMA</H1>
+          <p>Forever faster.</p>
         </Header>
 
         <GridStyler>

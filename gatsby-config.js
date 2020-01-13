@@ -54,7 +54,7 @@ module.exports = {
         // This is the field under which it's accessible
         fieldName: "crystallize",
         // URL to query from
-        url: "https://graph.crystallize.com/tenant/teddy-bear-shop",
+        url: "https://graph.crystallize.com/tenant/puma",
       },
     },
     "gatsby-plugin-styled-components",

@@ -56,24 +56,21 @@ export const ProductInner = styled.span`
 `
 
 export const ImageWrapper = styled.div`
-  display: flex;
+  position: relative;
+  overflow: hidden;
   flex-grow: 1;
-  align-items: center;
-  justify-content: center;
 `
 
 export const Img = styled(Image)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   position: relative;
+  overflow: hidden;
   > img {
-    position: relative;
     object-fit: contain;
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
 `
 
@@ -93,9 +90,9 @@ export const Inner = styled.span`
   width: 100%;
   position: relative;
   z-index: 10;
-  padding: 40px;
+  padding: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100%;
   font-weight: 600;
   color: ${colors.darkText};
@@ -105,33 +102,6 @@ export const Inner = styled.span`
   &:hover {
     border: 2px solid #fff;
     background: #fff;
-  }
-`
-
-export const ArticleImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 40%;
-`
-
-export const ArticleImg = styled(Image)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  max-height: 350px;
-  max-width: 100%;
-  position: relative;
-
-  > img {
-    position: relative;
-    width: 100%;
-    object-fit: contain;
-    height: 100%;
-    max-height: 100%;
   }
 `
 
@@ -145,6 +115,7 @@ export const MicroFormat = styled.div`
     font-family: "Roboto Slab", "Roboto", "sans-serif";
   }
 `
+
 export const ContentLine = styled.div`
   display: flex;
   padding: 15px;

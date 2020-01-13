@@ -12,8 +12,6 @@ import {
   MicroFormat,
   ImageWrapper,
   Img,
-  ArticleImageWrapper,
-  ArticleImg,
   ContentLine,
   Price,
   imageSize,
@@ -28,24 +26,23 @@ function CategoryItem({ data }) {
 
   if (type === "folder" || type === "document") {
     const images = data.components.find(c => c.type === "images")
-    const richText = data.components.find(c => c.type === "richText")
-    const image = images && images.content ? images.content.images[0] : null
+    const image = images?.content?.images[0]
+
     return (
       <Outer type={type} to={path}>
         <Inner>
-          <MicroFormat>
-            <H3>{name}</H3>
-            <ShapeComponents components={[richText]} />
-          </MicroFormat>
-          <ArticleImageWrapper>
+          <ImageWrapper>
             {image && (
-              <ArticleImg
+              <Img
                 {...image}
                 alt={name}
                 sizes={`(min-width ${screen.md}px) ${imageSize.lg}, ${imageSize.xs}`}
               />
             )}
-          </ArticleImageWrapper>
+          </ImageWrapper>
+          <MicroFormat>
+            <H3>{name}</H3>
+          </MicroFormat>
         </Inner>
       </Outer>
     )
